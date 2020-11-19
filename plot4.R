@@ -1,3 +1,4 @@
+Sys.setlocale(locale = "English")
 data <- read.table("household_power_consumption.txt", sep = ";", header = TRUE)
 data$Date <-lubridate::dmy(data$Date) 
 data$ntime <- lubridate::dmy_hms(paste(data$Date,data$Time))
@@ -57,6 +58,7 @@ legend("topright", legend = c("Sub_metering_1",
                                        "Sub_metering_2","Sub_metering_3"), 
        col = c("black", "red","blue"),
        lty = 1, 
+       cex = 1.0,
        bty = "n" ,
        )
 
